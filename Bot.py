@@ -14,7 +14,7 @@ def download_video(message: Message):
         video = yt.streams.get_lowest_resolution()
         bot.reply_to(message, "Скачиваю...")
         video.download(filename="video.mp4")
-        bot.reply_to(message, "Done")
+        bot.reply_to(message, "Готово")
         bot.send_message(message.chat.id, "Что дальше? В конце обязательно выйди!", reply_markup=buttons)
     except Exception as e:
         print(e)
